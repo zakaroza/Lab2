@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 2 - GLB Model</title>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+
+      <!-- Load the model -->
+      <a-assets>
+        <a-asset-item id="treeModel" src="models/maple_tree/maple_tree.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- Camera -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 5"></a-entity>
+
+      <!-- Lights (important so model is visible) -->
+      <a-entity light="type: ambient; intensity: 1"></a-entity>
+      <a-entity light="type: directional; intensity: 1.2" position="2 4 3"></a-entity>
+
+      <!-- Ground -->
+      <a-plane
+        position="0 0 -4"
+        rotation="-90 0 0"
+        width="30"
+        height="30"
+        color="#7BC8A4">
+      </a-plane>
+
+      <!-- Sky -->
+      <a-sky color="#BEE7F0"></a-sky>
+
+      <!-- Tree model -->
+      <a-entity
+        gltf-model="#treeModel"
+        position="0 0 -3"
+        rotation="0 180 0"
+        scale="0.5 0.5 0.5">
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>

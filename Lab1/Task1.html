@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rainbow Tunnel</title>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+
+        <!-- Camera -->
+        <a-entity camera look-controls wasd-controls position="0 1.6 5"></a-entity>
+
+        <!-- Sky background -->
+        <a-sky color="#BEE7F0"></a-sky>
+
+        <!-- Floor -->
+        <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#9BE7C4"></a-plane>
+
+        <!-- Rainbow Torus Rings -->
+        <!-- Green outer ring -->
+        <a-torus position="0 2 -5" radius="4" radius-tubular="0.4" arc="180" rotation="0 0 0" color="green"></a-torus>
+
+        <!-- Yellow ring -->
+        <a-torus position="0 2 -5" radius="3.3" radius-tubular="0.4" arc="180" color="gold"></a-torus>
+
+        <!-- Blue ring -->
+        <a-torus position="0 2 -5" radius="2.6" radius-tubular="0.4" arc="180" color="blue"></a-torus>
+
+        <!-- Purple inner ring -->
+        <a-torus position="0 2 -5" radius="1.9" radius-tubular="0.4" arc="180" color="purple"></a-torus>
+
+        <!-- Pink poles -->
+        <a-cylinder position="-0.7 1 -5" radius="0.1" height="2" color="hotpink"></a-cylinder>
+        <a-cylinder position="0.7 1 -5" radius="0.1" height="2" color="hotpink"></a-cylinder>
+
+        <!-- Name sign -->
+        <a-plane position="0 2 -5" width="2" height="0.7" color="lightyellow"></a-plane>
+
+        <!-- Text -->
+        <a-text value="Zakaria"
+                position="0 2 -4.9"
+                align="center"
+                color="black"
+                width="4">
+        </a-text>
+
+    </a-scene>
+</body>
+</html>
